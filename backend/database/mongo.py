@@ -6,7 +6,11 @@ db = None
 
 def init_mongo(app):
     global client, db
-    client = MongoClient(app.config["MONGO_URI"])
+    client = MongoClient(
+        app.config["MONGO_URI"],
+        tls=True,
+        tlsAllowInvalidCertificates=True
+    )
     db = client[app.config["MONGO_DB_NAME"]]
     ensure_indexes()
 
