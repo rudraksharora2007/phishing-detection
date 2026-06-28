@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Phishing Detector Extension",
+  "version": "0.1.0",
+  "description": "Checks URLs using AI-Powered Phishing Detection API",
+  "permissions": ["activeTab", "storage"],
+  "host_permissions": ["http://localhost:5000/*"],
+  "action": {
+    "default_title": "Scan URL"
+  }
+}
